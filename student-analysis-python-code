@@ -1,0 +1,22 @@
+import pandas as pd
+
+#Load the student dataset
+df = pd.read_csv('DataSet/student.csv')
+
+#Preview the data
+print(df.head())
+
+#Check dataset size
+df.shape()
+
+#check data types
+df.dtypes
+
+#check for missing values
+df.isnull().sum()
+
+#check mean, median, min and max marks
+print("avg:", df.mark.mean(), "|| median:", df.mark.median(), "|| min:", df.mark.min(), "|| max:", df.mark.max())
+
+#show names of students that scored over 70 with their marks 
+print(df.loc[(df.mark > 70), ['name', 'mark']])
