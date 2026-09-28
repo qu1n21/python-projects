@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Load the student dataset
-df = pd.read_csv('DataSet/student.csv')
+df = pd.read_csv('dataset/student.csv')
 
 #Preview the data
 print(df.head())
