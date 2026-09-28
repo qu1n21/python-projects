@@ -15,7 +15,7 @@ The analysis includes:
 - Identifying students with marks over 70
  
 ## Dataset
-The dataset can be found in the `DataSet` folder.
+The dataset can be found in the `dataset` folder.
  
 ## Source Code
-The Python EDA can be found in `student_analysis.py`.
+The Python EDA can be found in `student-analysis-python-code.py`.
