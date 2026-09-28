@@ -1,5 +1,6 @@
 import pandas as pd
-
+from matplotlib import pyplot as plt
+import seaborn as sns
 #Load the student dataset
 df = pd.read_csv('dataset/student.csv')
 
@@ -54,3 +55,19 @@ df.rename(columns={'name':'full_name'}, inplace=True)
 df.to_csv('studentMarks.csv', columns=['full_name', 'mark'], index=False)
 df1= pd.read_csv('studentMarks.csv')
 
+#Creating a bar chart showing the numebr of students per class
+plt.figure(figsize=(10, 6))
+sns.countplot(x='class', hue='gender', data=df)
+plt.title('Number of Students in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Number of Students')
+plt.show()
+
+#Creating bar chart displaying the average marks per class
+plt.figure(figsize=(5,3))
+avg_mark= df.groupby('class')['mark'].mean()
+avg_mark.plot(kind='bar')
+plt.title("Average marks per class")
+plt.xlabel("Class")
+plt.ylabel("Avg. marks")
+plt.show()
