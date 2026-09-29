@@ -55,7 +55,7 @@ df.rename(columns={'name':'full_name'}, inplace=True)
 df.to_csv('studentMarks.csv', columns=['full_name', 'mark'], index=False)
 df1= pd.read_csv('studentMarks.csv')
 
-#Creating a bar chart showing the numebr of students per class
+#Creating a bar chart showing the number of students per class
 plt.figure(figsize=(10, 6))
 sns.countplot(x='class', hue='gender', data=df)
 plt.title('Number of Students in Each Class')
